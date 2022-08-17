@@ -18,21 +18,24 @@ def get_args():
 
     parser.add_argument('--model_type',
                         action = 'store',
-                        default = 'r'
+                        default = 'r',
                         type= str,
                         help= 'r for regression and c for classification')
 
     parser.add_argument('--min_units_per_layers',
                         action = 'store',
-                        default = 32
+                        default = 32,
                         type= int,
                         help= 'minimum number of units per layers')
 
     parser.add_argument('--max_units_per_layers',
                         action = 'store',
-                        default = 512
+                        default = 512,
                         type= int,
                         help= 'minimum number of units per layers')
+
+    parser.parse_args()
+    return parser
 
 
 

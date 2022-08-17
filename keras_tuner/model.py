@@ -2,6 +2,8 @@ from tensorflow import keras
 from tensorflow.keras import layers
 
 
+import arg_parse
+
 def toy_model(hp):
     model = keras.Sequential()
     model.add(layers.Flatten())
@@ -18,7 +20,3 @@ def toy_model(hp):
     )
     return model
 
-
-import keras_tuner
-
-toy_model(keras_tuner.HyperParameters())
