@@ -7,8 +7,10 @@ from data_loader import *
 parser = arg_parse.get_args()
 args = parser.parse_args()
 print(args.num_of_classes)
+print(args.max_number_of_layers)
+print(args.model_type)
 
-if parser.model_type =='c':
+if args.model_type =='c':
     tuner = keras_tuner.RandomSearch(
         hypermodel=build_model,
         objective="val_accuracy",

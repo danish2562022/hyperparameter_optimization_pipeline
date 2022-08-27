@@ -8,7 +8,7 @@ opt = parser.parse_args()
 def build_model(hp):
     model = keras.Sequential()
     model.add(layers.Flatten())
-    for i in range(hp.Int("num_layers",1,opt.number_of_layers)):
+    for i in range(hp.Int("num_layers",1,opt.max_number_of_layers)):
         model.add(
             layers.Dense(
                 # Tune number of units separately.

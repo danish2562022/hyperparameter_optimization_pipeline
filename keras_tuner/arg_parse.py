@@ -26,7 +26,7 @@ def get_args():
                         default=None,
                         help='config file',)
 
-    parser.add_argument('--number_of_layers',
+    parser.add_argument('--max_number_of_layers',
                         action = 'store',
                         default = 5,
                         type = int,
