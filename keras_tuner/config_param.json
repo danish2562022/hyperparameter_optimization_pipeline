@@ -1,0 +1,6 @@
+{
+    "num_of_classes": 12,
+    "x_axis_title": "\\textrm{x-axis title}",
+    "y_axis_title": "\\textrm{y-axis title}",
+    "plot_name": "test_plot"
+}

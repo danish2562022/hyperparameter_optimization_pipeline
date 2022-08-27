@@ -46,7 +46,6 @@ tuner = keras_tuner.Hyperband(
     max_epochs=2,
     factor=3,
     hyperband_iterations=1,
-    distribution_strategy=tf.distribute.MirroredStrategy(),
     directory="results_dir",
     project_name="mnist",
     overwrite=True,
