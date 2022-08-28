@@ -17,7 +17,7 @@ def build_model(hp):
                 activation=hp.Choice("activation", ["relu", "tanh"]),
             )
         )
-        if hp.Boolean("dropout"):
+        if hp.Boolean(f"dropout_{i}"):
             model.add(layers.Dropout(rate=0.25))
     learning_rate = hp.Float("lr", min_value=1e-4, max_value=1e-2, sampling="log")
 
