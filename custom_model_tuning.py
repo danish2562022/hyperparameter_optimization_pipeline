@@ -35,7 +35,7 @@ class CustomTuning(keras_tuner.HyperModel):
 
 
 
-    def fit(self, hp, model, x_train, y_train, validation_data, callbacks=None, **kwargs):
+    def fit(self, hp, model, x_train, y_train,epochs, validation_data, callbacks=None, **kwargs):
 
         batch_size = hp.Int("batch_size", 32, 128, step=32, default=64)
         train_ds = tf.data.Dataset.from_tensor_slices((x_train, y_train)).batch(
@@ -71,6 +71,44 @@ class CustomTuning(keras_tuner.HyperModel):
 
                 if model.losses:
                     loss += tf.math.add_n(model.losses)
+
+            gradients = tape.gradient(loss, model.trainable_variables)
+            optim.apply_gradients(zip(gradients, model.trainable_variables))
+
+
+        @tf.function
+        def run_val_step(images, labels):
+            logits = model(images)
+            loss = loss_fn(labels, logits)
+            # Update the metric.
+            epoch_loss_metric.update_state(loss)
+
+        for callback in callbacks:
+            callback.model = model    
+        best_epoch_loss = float("inf")
+
+        for epoch in range(epochs):
+            print(f"Epoch: {epoch}")
+
+            for features,labels in train_ds:
+                run_train_step(features,labels)
+
+            for features,labels in validation_data:
+                run_val_step(features,labels)
+
+            epoch_loss = float(epoch_loss_metric.result().numpy())
+            for callback in callbacks:
+                # The "my_metric" is the objective passed to the tuner.
+                callback.on_epoch_end(epoch, logs={"my_metric": epoch_loss})
+            epoch_loss_metric.reset_states()
+            print(f"Epoch loss: {epoch_loss}")
+            best_epoch_loss = min(best_epoch_loss, epoch_loss)
+
+
+        return best_epoch_loss
+
+
+
 
 
 
