@@ -28,9 +28,9 @@ Explain how to run the automated hyperparameter optimization pipeline
 
 ### Sample Tests
 
-Explain what these tests test and why
-
-    python .\hyperparameter_tuning_custom_training.py --config_files "config_param.json"
+    $ python .\hyperparameter_tuning_custom_training.py --config_files "config_param.json"
+    
+ Best model's hyperparameters get saved in best_model_params.txt
 
 ### Style test
 
