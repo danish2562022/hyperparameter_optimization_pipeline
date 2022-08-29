@@ -1,6 +1,9 @@
 # Hyperparameter Optimization Pipeline for MultiGPUs
 
-One Paragraph of the project description
+Performance of machine learning model depends on the configuration of hyperparameters. Finding the optimal hyperparameters (hypeparameter tuning), could be very time consuming and challenging.  
+
+In this project, we automate the hyperparameter optimization pipeline for classifier and regressor models.
+
 
 Initially appeared on
 [gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
