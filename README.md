@@ -24,13 +24,13 @@ Say what the step will be
 
 ## Running
 
-Explain how to run the automated tests for this system
+Explain how to run the automated hyperparameter optimization pipeline
 
 ### Sample Tests
 
 Explain what these tests test and why
 
-    Give an example
+    python .\hyperparameter_tuning_custom_training.py --config_files "config_param.json"
 
 ### Style test
 
