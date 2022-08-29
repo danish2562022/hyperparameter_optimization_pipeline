@@ -17,10 +17,10 @@ To know more about Keras Tuner, kindly refer official [docs](https://keras.io/ap
 Say what the step will be
 
     $ git clone https://github.com/danish2562022/hyperparameter_optimization_pipeline.git
+    $ cd hyperparameter_optimization_pipeline
+    $ pip install -r reqiurements.txt
 
-And repeat
 
-    until finished
 
 End with an example of getting some data out of the system or using it
 for a little demo
