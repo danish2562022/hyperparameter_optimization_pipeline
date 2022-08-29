@@ -8,9 +8,7 @@ In this project, we automate the hyperparameter optimization pipeline for classi
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+To know more abput Keras Tuner, kindly refer official [docs](https://keras.io/api/keras_tuner/)
 
 ### Prerequisites
 
