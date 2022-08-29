@@ -8,9 +8,9 @@ In this project, we automate the hyperparameter optimization pipeline for classi
 
 ## Getting Started
 
-To know more abput Keras Tuner, kindly refer official [docs](https://keras.io/api/keras_tuner/)
+To know more about Keras Tuner, kindly refer official [docs](https://keras.io/api/keras_tuner/)
 
-### Prerequisites
+### Installation
 
 Requirements for the software and other tools to build, test and push 
 - [Example 1](https://www.example.com)
