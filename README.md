@@ -2,7 +2,7 @@
 
 Performance of machine learning model depends on the configuration of hyperparameters. Finding the optimal hyperparameters (hypeparameter tuning), could be very time consuming and challenging.  
 
-In this project, we automate the hyperparameter optimization pipeline for classifier and regressor models.
+In this project, we automate the hyperparameter optimization pipeline for classification and regression models.
 
 
 Initially appeared on
