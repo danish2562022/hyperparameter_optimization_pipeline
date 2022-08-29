@@ -13,12 +13,10 @@ To know more about Keras Tuner, kindly refer official [docs](https://keras.io/ap
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development
-environment running
 
 Say what the step will be
 
-    Give the example
+    $ git clone https://github.com/danish2562022/hyperparameter_optimization_pipeline.git
 
 And repeat
 
