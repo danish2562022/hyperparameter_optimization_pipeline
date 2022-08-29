@@ -32,15 +32,19 @@ Explain how to run the automated hyperparameter optimization pipeline
     
  Best model's hyperparameters get saved in best_model_params.txt
 
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
 
 ## Configuration file
-
-Add additional notes to deploy this on a live system
+Hyperparameter search space is defined in config_param.json
+    
+     {
+    "max_number_of_layers": 5,
+    "model_type" : "c",
+    "min_units_per_layers" : 32,
+    "max_units_per_layers" : 512,
+    "num_of_classes" : 10,
+    "choose_optimizer": "adam"
+    }
+        
 
 ## Built With
 
