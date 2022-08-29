@@ -38,7 +38,7 @@ Checks if the best practices and the right coding style has been used.
 
     Give an example
 
-## Deployment
+## Configuration file
 
 Add additional notes to deploy this on a live system
 
