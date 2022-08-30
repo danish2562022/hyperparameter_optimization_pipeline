@@ -37,12 +37,15 @@ Explain how to run the automated hyperparameter optimization pipeline
 Hyperparameter search space is defined in config_param.json
     
      {
+     "min_number_of_layers": 1,
     "max_number_of_layers": 5,
     "model_type" : "c",
     "min_units_per_layers" : 32,
     "max_units_per_layers" : 512,
     "num_of_classes" : 10,
-    "choose_optimizer": "adam"
+    "choose_optimizer": "adam",
+    "epochs" : 10,
+    "max_trials": 10
     }
         
 
