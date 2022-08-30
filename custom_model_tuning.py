@@ -14,7 +14,7 @@ class CustomTuning(keras_tuner.HyperModel):
         model = keras.Sequential()
         model.add(layers.Flatten())
         
-        for i in range(1,hp.Int("num_layers",1,opt.max_number_of_layers)+1):
+        for i in range(1,hp.Int("num_layers",opt.min_number_of_layers,opt.max_number_of_layers)+1):
        
             model.add(
                 layers.Dense(

@@ -30,7 +30,28 @@ def get_args():
                         action = 'store',
                         default = 5,
                         type = int,
-                        help = "Number of layers in architectures"
+                        help = "Minimum number of layers in architectures"
+                        )
+
+    parser.add_argument('--min_number_of_layers',
+                        action = 'store',
+                        default = 1,
+                        type = int,
+                        help = "Maximum number of layers in architectures"
+                        )
+
+    parser.add_argument('--epochs',
+                        action = 'store',
+                        default = 5,
+                        type = int,
+                        help = "Number of epochs"
+                        )
+
+    parser.add_argument('--max_trials',
+                        action = 'store',
+                        default = 10,
+                        type = int,
+                        help = "Number of epochs"
                         )
 
     parser.add_argument('--model_type',
