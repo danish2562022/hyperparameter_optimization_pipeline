@@ -22,7 +22,7 @@ class CustomTuning(keras_tuner.HyperModel):
                     # Tune number of units separately.
                     units=hp.Int(f"units_{i}", min_value=opt.min_units_per_layers, max_value=opt.max_units_per_layers, step=32),
                     kernel_regularizer = tf.keras.regularizers.L2(l2=hp.Float(f"lr_{i}", min_value=1e-4, max_value=1e-2, sampling="log")),
-                    activation=hp.Choice("activation", ["relu", "tanh"]),
+                    activation=hp.Choice(f"activation_{i}", ["relu", "tanh"]),
                 )
             )
             if hp.Boolean(f"dropout_{i}"):
