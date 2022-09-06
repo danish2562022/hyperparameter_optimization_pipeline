@@ -10,9 +10,10 @@ opt = parser.parse_args()
 class CustomTuning(keras_tuner.HyperModel):
 
     def build(self,hp):
-
+        
         model = keras.Sequential()
-        model.add(layers.Flatten())
+        if opt.model_type == 'c':
+            model.add(layers.Flatten())
         
         for i in range(1,hp.Int("num_layers",opt.min_number_of_layers,opt.max_number_of_layers)+1):
        
@@ -99,7 +100,7 @@ class CustomTuning(keras_tuner.HyperModel):
 
             epoch_loss = float(epoch_loss_metric.result().numpy())
             for callback in callbacks:
-                # The "my_metric" is the objective passed to the tuner.
+             
                 callback.on_epoch_end(epoch, logs={"my_metric": epoch_loss})
             epoch_loss_metric.reset_states()
             print(f"Epoch loss: {epoch_loss}")

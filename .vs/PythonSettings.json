@@ -1,3 +1,4 @@
 {
-  "TestFramework": "unittest"
+  "TestFramework": "unittest",
+  "SuppressEnvironmentCreationPrompt": true
 }

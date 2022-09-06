@@ -8,16 +8,13 @@ from data_loader import *
 
 parser = arg_parse.get_args()
 args = parser.parse_args()
-print(args.num_of_classes)
-print(args.max_number_of_layers)
-print(args.model_type)
 
-if args.model_type =='c':
-    tuner = keras_tuner.RandomSearch(
+
+tuner = keras_tuner.RandomSearch(
         hypermodel = CustomTuning(),
         max_trials=args.max_trials,
         overwrite=True,
-        directory="resuts",
+        directory="results",
         project_name="custom_training",
     )
 
