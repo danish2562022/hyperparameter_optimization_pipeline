@@ -17,6 +17,7 @@ tuner = keras_tuner.RandomSearch(
         max_trials = args.max_trials,
         overwrite = True,
         directory = "results",
+        distribution_strategy=tf.distribute.MirroredStrategy(),
         project_name= "custom_training",
     )
 
