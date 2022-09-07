@@ -1,0 +1,18 @@
+
+
+BootStrap: docker
+From: tensorflow/tensorflow:latest-gpu
+
+%post
+       
+    apt-get update  
+    pip install numpy
+    pip install pandas 
+    pip install tqdm 
+    pip install tensorflow
+    pip install keras-tuner
+    pip install -U scikit-learn	
+    pip install keras-tuner --upgrade 	  
+  
+%environment
+    export PATH=$PATH:/usr/games
