@@ -49,7 +49,7 @@ def get_args():
 
     parser.add_argument('--max_trials',
                         action = 'store',
-                        default = 10,
+                        default = 50,
                         type = int,
                         help = "Number of epochs"
                         )
