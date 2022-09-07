@@ -1,16 +1,18 @@
-{'num_layers': 1, 'units_1': 480, 'lr_1': 0.001096082336813933, 'activation_1': 'relu', 'dropout_1': False, 'batch_size': 64, 'lr': 0.0001}
-Model: "sequential"
+{'num_layers': 2, 'units_1': 448, 'lr_1': 0.00012624299346670673, 'activation_1': 'tanh', 'dropout_1': False, 'units_2': 192, 'lr_2': 0.0012510861268795438, 'activation_2': 'tanh', 'dropout_2': True, 'units_3': 384, 'lr_3': 0.00035661181689187083, 'activation_3': 'relu', 'dropout_3': False, 'batch_size': 96, 'lr': 0.0040094836352856465, 'units_4': 128, 'lr_4': 0.00025438327565105814, 'activation_4': 'relu', 'dropout_4': False}
+Model: "sequential_1"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
- flatten (Flatten)           (None, 784)               0         
+ dense_3 (Dense)             (None, 448)               6272      
                                                                  
- dense (Dense)               (None, 480)               376800    
+ dense_4 (Dense)             (None, 192)               86208     
                                                                  
- dense_1 (Dense)             (None, 10)                4810      
+ dropout_1 (Dropout)         (None, 192)               0         
+                                                                 
+ dense_5 (Dense)             (None, 1)                 193       
                                                                  
 =================================================================
-Total params: 381,610
-Trainable params: 381,610
+Total params: 92,673
+Trainable params: 92,673
 Non-trainable params: 0
 _________________________________________________________________

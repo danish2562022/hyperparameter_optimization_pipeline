@@ -4,7 +4,7 @@ import keras_tuner
 from contextlib import redirect_stdout
 from custom_model_tuning import *
 from data_loader import *
-import best_model
+from best_model import *
 
 
 
@@ -27,5 +27,6 @@ best_hps = tuner.get_best_hyperparameters()[0]
 with open("best_model_params.txt", "w") as external_file:
     print(best_hps.values, file = external_file)
     external_file.close()
+best_model()
 
 
